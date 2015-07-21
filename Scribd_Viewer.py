@@ -20,6 +20,7 @@ start =  dict.find("\"access_key\"")
 end = start + 38
 main = dict[start:end]
 key = main.replace("\"access_key\":\"", "")
+key = key.replace("\"", "")
 url = url.replace("()", doc_id)
 url = url.replace("$$$", key)
 print "****"
